@@ -2,14 +2,21 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "Auto Commit & Push",
+      "label": "Push to GitHub",
       "type": "shell",
-      "command": "${workspaceFolder}/autoCommitPush.bat",
+      "command": "git add . && git commit -m \"${input:commitMessage}\" && git push",
+      "problemMatcher": [],
       "group": {
         "kind": "build",
         "isDefault": true
-      },
-      "problemMatcher": []
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "id": "commitMessage",
+      "type": "promptString",
+      "description": "Enter commit message"
     }
   ]
 }
