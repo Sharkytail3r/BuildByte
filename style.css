@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -65,11 +67,11 @@
 }
 
 .btn-start {
-    background-color: #636b2f;
+    background-color: #3d4127;
     color: #ffffff;
     text-decoration: none;
     padding: 0.6rem 1.3rem;
-    border-radius: 13px;
+    border-radius: 8px;
     font-weight: 600;
     font-size: 1rem;
     transition: background-color 0.2s ease, transform 0.1s ease;
@@ -78,6 +80,7 @@
 
 .btn-start:hover {
     background-color: #bac095;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
 }
 
 .btn-start:active {
@@ -131,4 +134,118 @@
   to {
     transform: translateY(-100%);
   }
+}
+
+
+.hero  {
+    min-height: 6vh;
+    display: flex;
+    align-items: center;
+    padding: 20px 8%;
+}
+
+.hero-content {
+    max-width: 720px;
+}
+
+.hero h1{
+    font-family: "Playfair Display", serif;
+    font-size: clamp(1.5rem, 4vw, 3.5rem);
+    line-height: 1.05;
+    font-weight: 600;
+    letter-spacing: -2px;
+}
+
+.hero h1 span {
+    color: var(--olive);
+    font-family: "Playfair Display", serif;
+}
+
+.hero h1 span {
+    color: #636b2f ;
+}
+
+.hero p {
+    max-width: 520px;
+    margin-top: 8px;
+
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #62635a;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 14px;
+    margin-top: 10px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.25s ease;
+}
+
+.secondary {
+    color: var(--dark);
+    border: 1px solid black;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
+    
+}
+
+.secondary:hover {
+    background: black;
+    color: #d4de95;
+}
+
+.hero-features {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-top: 45px;
+    max-width: 700px;
+}
+
+.feature {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.feature-icon {
+    color: var(--olive);
+    font-size: 28px;
+    line-height: 1;
+}
+
+.feature h3 {
+    font-family: "DM Sans", sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--dark);
+    margin-bottom: 7px;
+}
+
+.feature p {
+    margin: 0;
+    font-size: 12px;
+    line-height: 1.5;
+    color: #62635a;
+}
+
+
+@media (max-width: 700px) {
+    .hero-features {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+}
+
+@media (max-width: 450px) {
+    .hero-features {
+        grid-template-columns: 1fr;
+    }
 }

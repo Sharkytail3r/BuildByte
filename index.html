@@ -1,54 +1,109 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BuildByte</title>
-    <link rel="icon" href="BuildByteFavicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
+    <link rel="icon" href="BuildByteFavicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+  </head>
+  <body>
     <!-- splash screen overlay -->
     <div id="intro-overlay">
-        <h1 class="opening-text">WELCOME TO BUILDBYTE</h1>
+      <h1 class="opening-text">WELCOME TO BUILDBYTE</h1>
     </div>
 
-    
-
-
     <nav class="navbar">
-        <!-- Logo & Brand Name -->
-         <div class="nav-logo">
-           <img src="./BuildByteLogo.png" alt="Logo"  class="logo-image">
-           <span class="logo-text">BuildByte</span>
-         </div>
+      <!-- Logo & Brand Name -->
+      <div class="nav-logo">
+        <img src="./BuildByteLogo.png" alt="Logo" class="logo-image" />
+        <span class="logo-text">BuildByte</span>
+      </div>
 
-         <div class="nav-right-group">
-            <!-- Navigation links -->
-          <ul class="nav-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">FAQ</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
+      <div class="nav-right-group">
+        <!-- Navigation links -->
+        <ul class="nav-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Portfolio</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
 
-          <div class="nav-cta">
-            <a href="#" class="btn-start">Start Project</a>  <!--link contact section-->
-          </div>
-         </div>
+        <div class="nav-cta">
+          <a href="#" class="btn-start">Start Project</a>
+          <!--link contact section-->
+        </div>
+      </div>
     </nav>
 
+    <section class="hero">
+      <div class="hero-content">
+        <h1>
+          We Build Websites<br />
+          That <span>Grow your business</span>
+        </h1>
 
-    <script>
-  // Wait 3.7 seconds (2.5s delay + 1.2s slide duration) then allow scrolling
-  setTimeout(() => {
-    document.body.style.overflow = "auto";
-  }, 3700);
-</script>
+        <p>
+          Simple, fast and modern websites built to help your brand stand out
+          and succeed online.
+        </p>
 
-    
-</body>
+        <div class="hero-buttons">
+          <a href="#" class="btn-start">Start a Project →</a>
+          <a href="#" class="btn secondary">View our work</a>
+        </div>
+
+        <div class="hero-features">
+          <div class="feature">
+            <div class="feature-icon">
+              <i data-lucide="shield-check"></i>
+            </div>
+
+            <div>
+              <h3>Reliable</h3>
+              <p>Always secure<br>and up to date</p>
+            </div>
+          </div>
+
+          <div class="feature">
+            <div class="feature-icon">
+              <i data-lucide="zap"></i>
+            </div>
+            
+            <div>
+              <h3>Fast</h3>
+              <p>Optimized for speed<br />and performance</p>
+            </div>
+          </div>
+
+          <div class="feature">
+            <div class="feature-icon">
+              <i data-lucide="smartphone"></i>
+            </div>
+
+            <div>
+              <h3>Responsive</h3>
+              <p>Looks perfect on all<br>devices</p>
+            </div>
+          </div>
+
+          <div class="feature">
+            <div class="feature-icon">
+              <i data-lucide="headphones"></i>
+            </div>
+
+            <div>
+              <h3>Support</h3>
+              <p>We're here when<br>you need us</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
 </html>
