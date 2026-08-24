@@ -1,10 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600;700&display=swap');
 
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
 }
 
 .navbar {
@@ -12,6 +17,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
+    background-color: #EDEAE0;
 }
 
 .nav-logo {
@@ -138,10 +144,14 @@
 
 
 .hero  {
-    min-height: 6vh;
-    display: flex;
+    min-height: 90vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     align-items: center;
-    padding: 20px 8%;
+    gap: 50px;
+    padding: 80px 7%;
+    background-color: #EDEAE0;
+    position: relative;
 }
 
 .hero-content {
@@ -249,3 +259,103 @@
         grid-template-columns: 1fr;
     }
 }
+
+.hero-mockup {
+    width: 110%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-mockup img {
+    width: 110%;
+    max-width: 750px;
+    height: auto;
+    display: block;
+}
+
+@media (max-width: 900px) {
+
+    .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .hero-content {
+        max-width: 700px;
+        margin: auto;
+    }
+
+    .hero-mockup {
+        width: 100%;
+        transform: none;
+    }
+
+    .hero-mockup img {
+        width: 100%;
+        max-width: 650px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-features {
+        justify-content: center;
+    }
+}
+
+.scroll-down {
+    position: absolute;
+    left: 50%;
+    bottom: 25px;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    color: #636B2F;
+    font-size: 11px;
+    letter-spacing: 3px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.mouse {
+    width: 22px;
+    height: 34px;
+    border: 2px solid #636B2F;
+    border-radius: 14px;
+    position: relative;
+}
+
+.mouse-wheel {
+    width: 3px;
+    height: 7px;
+    background-color: #636B2F;
+    border-radius: 5px;
+    position: absolute;
+    top: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: scrollWheel 1.5s infinite;
+}
+
+@keyframes scrollWheel {
+
+    0% {
+        opacity: 0;
+        transform: translate(-50%, 0);
+    }
+
+    30% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(-50%, 12px);
+    }
+
+}
+
